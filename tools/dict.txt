@@ -1,0 +1,13 @@
+password
+passwd
+pass
+ftp
+dbconnect
+dbname
+sql
+server 
+API
+apikey
+api
+username
+pwlist
