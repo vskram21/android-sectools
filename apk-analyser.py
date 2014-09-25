@@ -3,15 +3,35 @@ import xml.etree.ElementTree as ET
 
 def get_completepath(directory):
     file_paths = []  
+    file_name = []
     for path, direc, files in os.walk(directory):
         for filen in files:
             filepath = os.path.join(path, filen)
+	    file_name.append(filen)
             file_paths.append(filepath)  
 
-    return file_paths  
+    return file_paths, file_name  
+    
+def get_complete_out_path (directory):
+    smali_file_name = []
+    smali_file_path = []
+    for path, direc, files in os.walk(directory):
+        for filen in files:
+		if filen.endswith('.smali'):
+			smali_file_name.append(filen)
+			filepath = os.path.join(path, filen)
+			smali_file_path.append(filepath)
+    return smali_file_path, smali_file_name
+
+def logfile_writter(files):
+	dict = []
+	with open('dict.txt') as fp:
+		for line in fp:
+			dict.append(line)
+	print dict
 
 apk_path = os.path.dirname(os.path.realpath(__file__)) + "/in"
-full_path = get_completepath(apk_path)
+full_path, file_name = get_completepath(apk_path)
 print full_path
 
 #Setting the path of the tools
@@ -23,15 +43,17 @@ os.system (apktool_cmd_string)
 
 logfile = os.path.dirname(os.path.realpath(__file__)) + "/log.txt"
 f = open(logfile, "w")
-f.write("Report on the analysis of the apk file located in the path   \n" )
-f.write(full_path[0])
+f.write("Report on the analysis of the apk file:" )
+f.write(file_name[0])
 f.write("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 f.write("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
 apktool_extracted_dir = os.path.dirname(os.path.realpath(__file__)) + "/out"
 manifest_path = apktool_extracted_dir + "/AndroidManifest.xml"
-tree = ET.parse(manifest_path)
+'''tree = ET.parse(manifest_path)
 root = tree.getroot()
+
+
 #user_permission_list = []
 
 f.write("\nApplication Permissions:\n")
@@ -40,14 +62,19 @@ for user_permission in root.iter('uses-permission'):
 	f.write(str(user_permission.attrib.values()))
 	f.write("\n")
 f.close()
+'''
 print "\n\n\nPrinting the output file\n\n\n"
 os.system("cat log.txt")
+
+manifest_print_cmd = "cat " + manifest_path 
+os.system(manifest_print_cmd )
 #print user_permission_list
 
 out_directory_path = os.path.dirname(os.path.realpath(__file__)) + "/out"
-out_directory_files = get_completepath(out_directory_path)
+smali_file_path, smali_file_name = get_complete_out_path(out_directory_path)
+#print smali_file_path, smali_file_name
 
-print out_directory_files
+logfile_writter(smali_file_path)
 
 
 

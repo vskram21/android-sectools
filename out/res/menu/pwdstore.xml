@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ico_add" android:id="@id/menu_add_password" android:title="New password" android:showAsAction="always" />
+    <item android:id="@id/git_pull" android:title="Pull from remote" />
+    <item android:id="@id/git_push" android:title="Push to remote" />
+    <item android:icon="@drawable/ico_sync" android:id="@id/referesh" android:title="Refresh list" android:showAsAction="ifRoom" />
+    <item android:id="@id/user_pref" android:orderInCategory="100" android:title="Settings" />
+</menu>

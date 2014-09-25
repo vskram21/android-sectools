@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Spinner android:id="@id/clone_protocol" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:id="@id/clone_uri" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Repository URI" android:inputType="textWebEmailAddress" />
+        </LinearLayout>
+        <Spinner android:id="@id/connection_mode" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <Button android:id="@id/clone_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Clone!" android:onClick="cloneRepository" />
+    </LinearLayout>
+</RelativeLayout>

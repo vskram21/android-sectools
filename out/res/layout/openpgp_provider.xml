@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/parent_scroll" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Encrypt UserIds (split with ',')" />
+        <EditText android:textAppearance="@*android:style/TextAppearance.Small" android:id="@id/crypto_provider_demo_encrypt_user_id" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="dominik@dominikschuermann.de" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Message" />
+        <ScrollView android:id="@id/child_scroll1" android:layout_width="fill_parent" android:layout_height="120.0dip" android:fillViewport="true">
+            <EditText android:textAppearance="@*android:style/TextAppearance.Small" android:id="@id/crypto_provider_demo_message" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="message" android:hint="cleartext message" android:scrollHorizontally="true" />
+        </ScrollView>
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Ciphertext" />
+        <ScrollView android:id="@id/child_scroll2" android:layout_width="fill_parent" android:layout_height="120.0dip" android:fillViewport="true">
+            <EditText android:textAppearance="@*android:style/TextAppearance.Small" android:id="@id/crypto_provider_demo_ciphertext" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="ciphertext" android:hint="ciphertext" />
+        </ScrollView>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_gravity="center_vertical" android:id="@id/crypto_provider_demo_sign" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Sign" android:layout_weight="1.0" />
+            <Button android:layout_gravity="center_vertical" android:id="@id/crypto_provider_demo_encrypt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Encrypt" android:layout_weight="1.0" />
+            <Button android:layout_gravity="center_vertical" android:id="@id/crypto_provider_demo_sign_and_encrypt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Sign and Encrypt" android:layout_weight="1.0" />
+        </LinearLayout>
+        <Button android:id="@id/crypto_provider_demo_decrypt_and_verify" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Decrypt and Verify" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Account ID:" />
+        <EditText android:id="@id/crypto_provider_demo_account" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Alice &lt;alice@example.com>" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Get key:" />
+        <EditText android:id="@id/crypto_provider_demo_get_key_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="0x718c070100012282" />
+        <Button android:id="@id/crypto_provider_demo_get_key" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Get key" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Get key ids:" />
+        <EditText android:id="@id/crypto_provider_demo_get_key_ids_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="dominik@dominikschuermann.de" />
+        <Button android:id="@id/crypto_provider_demo_get_key_ids" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Get key ids" />
+    </LinearLayout>
+</ScrollView>

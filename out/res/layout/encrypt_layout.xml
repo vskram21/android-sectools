@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/rectangle" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:textColor="@*android:color/holo_blue_dark" android:layout_gravity="center_vertical" android:id="@id/crypto_password_category" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CATEGORY/" />
+        <EditText android:textColor="@*android:color/holo_orange_dark" android:layout_gravity="center_vertical" android:id="@id/crypto_password_file_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/crypto_name_hint" />
+    </LinearLayout>
+    <ScrollView android:background="@drawable/rectangle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/activity_vertical_margin" android:layout_marginBottom="@dimen/activity_vertical_margin" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/crypto_container" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/crypto_pass_label" />
+                <EditText android:typeface="monospace" android:id="@id/crypto_password_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/crypto_extra_label" />
+            <EditText android:enabled="true" android:typeface="monospace" android:id="@id/crypto_extra_edit" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:background="@*android:color/darker_gray" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="8.0dip" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0">
+        <ImageButton android:id="@id/crypto_confirm_add" android:background="@drawable/blue_rectangle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ico_confirm_add" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:onClick="handleClick" android:layout_alignParentEnd="true" />
+        <ImageButton android:id="@id/crypto_cancel_add" android:background="@drawable/red_rectangle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ico_cancel" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:onClick="handleClick" android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</LinearLayout>
