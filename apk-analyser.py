@@ -23,7 +23,7 @@ os.system (apktool_cmd_string)
 
 logfile = os.path.dirname(os.path.realpath(__file__)) + "/log.txt"
 f = open(logfile, "w")
-f.write("Report on the analysis of the apk file located in the path   " )
+f.write("Report on the analysis of the apk file located in the path   \n" )
 f.write(full_path[0])
 f.write("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 f.write("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
@@ -34,7 +34,7 @@ tree = ET.parse(manifest_path)
 root = tree.getroot()
 #user_permission_list = []
 
-f.write("\nApplication Persmissions:\n")
+f.write("\nApplication Permissions:\n")
 for user_permission in root.iter('uses-permission'):
 	user_permission_list = user_permission.attrib.values()
 	f.write(str(user_permission.attrib.values()))
@@ -43,6 +43,14 @@ f.close()
 print "\n\n\nPrinting the output file\n\n\n"
 os.system("cat log.txt")
 #print user_permission_list
+
+out_directory_path = os.path.dirname(os.path.realpath(__file__)) + "/out"
+out_directory_files = get_completepath(out_directory_path)
+
+print out_directory_files
+
+
+
 
 
 

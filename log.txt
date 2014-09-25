@@ -1,7 +1,8 @@
-Report on the analysis of the apk file located in the path   /home/santoku/Documents/android/android-sectools/in/com.zeapo.pwdstore_13.apk
+Report on the analysis of the apk file located in the path   
+/home/satz/Documents/learning/android/android-sectools/in/com.zeapo.pwdstore_13.apk
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Application Persmissions:
+Application Permissions:
 ['android.permission.WRITE_EXTERNAL_STORAGE']
 ['android.permission.READ_EXTERNAL_STORAGE']
 ['android.permission.INTERNET']
