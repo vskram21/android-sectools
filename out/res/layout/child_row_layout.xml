@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<GridLayout android:orientation="vertical" android:id="@id/child_row_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/activity_vertical_margin"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageButton android:layout_gravity="center_vertical" android:id="@id/crypto_delete_button" android:background="@drawable/red_rectangle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ico_del" android:layout_column="1" android:layout_row="0" />
-    <ImageButton android:layout_gravity="center_vertical" android:id="@id/crypto_show_button" android:background="@drawable/blue_rectangle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/ico_key" android:layout_column="2" android:layout_row="0" />
-</GridLayout>

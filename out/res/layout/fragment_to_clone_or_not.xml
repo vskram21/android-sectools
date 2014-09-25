@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/myRectangleView" android:background="@drawable/rectangle" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <TextView android:gravity="center_horizontal" android:id="@id/textView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/clone_fragment_text" />
-        <Button android:id="@id/button" android:background="@*android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/initialize" android:layout_alignTop="@id/main_clone_button" android:layout_alignParentLeft="true" android:onClick="initRepository" android:layout_alignParentStart="true" />
-        <Button android:textColor="@*android:color/holo_orange_dark" android:id="@id/main_clone_button" android:background="@*android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/clone" android:layout_below="@id/textView" android:layout_alignParentRight="true" android:onClick="getClone" android:layout_alignParentEnd="true" />
-    </RelativeLayout>
-</FrameLayout>
