@@ -24,11 +24,20 @@ def get_complete_out_path (directory):
     return smali_file_path, smali_file_name
 
 def logfile_writter(files):
-	dict = []
+	dictionary = []
 	with open('dict.txt') as fp:
 		for line in fp:
-			dict.append(line)
-	print dict
+			dictionary.append(line.rstrip())
+	for each in files:
+		with open(each) as fp:
+			for line in fp:
+				#print "entered fp:", line
+				for dictionary_item in dictionary:
+					if dictionary_item in line:
+						#print "extered dictionary"
+						print  dictionary_item, line
+					
+	print dictionary
 
 apk_path = os.path.dirname(os.path.realpath(__file__)) + "/in"
 full_path, file_name = get_completepath(apk_path)
