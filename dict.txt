@@ -1,0 +1,8 @@
+pass
+password
+key
+crypto
+algorithm
+passport
+bank
+api
