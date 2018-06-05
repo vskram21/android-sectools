@@ -1,3 +1,7 @@
-android-sectools
-================
-This project containg small script to make the android pentesters job easier.
+## android-sectools
+
+This project containg simple script to make the android pentesters job easier. 
+
+### Usage 
+
+python reverse-engineer.py -i <path to apk file> -o <output file>

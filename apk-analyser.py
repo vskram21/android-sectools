@@ -84,9 +84,3 @@ smali_file_path, smali_file_name = get_complete_out_path(out_directory_path)
 #print smali_file_path, smali_file_name
 
 logfile_writter(smali_file_path)
-
-
-
-
-
-
