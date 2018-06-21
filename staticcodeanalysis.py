@@ -9,11 +9,14 @@ def file_search(d1, dirn, file):
     filepath = os.path.abspath(os.path.join(dirn,file))
     for i in regex_list:
         for k, regex in i.items():
-            for match in regex.findall(open(filepath, encoding="utf8").read()):
-                d2 = copy.deepcopy(d1)
-                d2['Type'] = k
-                d2['Match'] = match
-                file_list.append(d2)    
+            try:
+                for match in regex.findall(open(filepath, encoding="utf8").read()):
+                    d2 = copy.deepcopy(d1)
+                    d2['Type'] = k
+                    d2['Match'] = match
+                    file_list.append(d2)
+            except:
+                print ("Failed to process the file: ", filepath)
 
 def search_code(sourcedir):
     

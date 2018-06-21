@@ -3,3 +3,5 @@ output/*
 .vscode*
 test.txt
 *.csv
+*.pyc
+__pycache__/*

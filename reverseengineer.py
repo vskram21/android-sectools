@@ -19,7 +19,7 @@ def enjarify():
     
 def cfr():
     cfr_path =  os.path.normpath(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'tools/cfr_0_130.jar'))
-    subprocess.call(['java', '-jar', cfr_path, jar_file, '--outputdir', java_source], shell=True)
+    subprocess.call(['java', '-jar', cfr_path, jar_file, '--caseinsensitivefs',  '--outputdir', java_source], shell=True)
 
 if __name__ == "__main__":
      
